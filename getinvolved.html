@@ -178,388 +178,418 @@
             </footer>
         </div>
     </body>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
 
-        body {
-            font-family: "Poppins", sans-serif;
-        }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: "Playfair Display", serif;
-            font-weight: 800;
-            color: #1800AD;
-        }
+    body {
+        font-family: "Poppins", sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: "Playfair Display", serif;
+        font-weight: 800;
+        color: #1800AD;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    a {
+        text-decoration: none;
+        color: #1800AD;
+    }
+
+    header {
+        padding: 20px;
+        background-color: white;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 100px;
+        display: block;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: inline-block;
+        width: auto;
+        margin: 0 18px;
+        line-height: 3em;
+    }
+
+    .student-hub {
+        background-color: #1800AD;
+        color: white;
+        padding: 10px 15px;
+        white-space: nowrap;
+    }
+
+    .get-involved-hero {
+        width: 100%;
+        aspect-ratio: 1600 / 600;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+
+    .get-involved-hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .involvement-section {
+        background-color: #eeeeee;
+        padding: 15px;
+        margin-bottom: 25px;
+    }
+
+    .involvement-section h2 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .involvement-intro {
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .involvement-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .involvement-card {
+        background-color: white;
+        border: 1px solid #cccccc;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .involvement-card h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .involvement-card p {
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        flex-grow: 1;
+    }
+
+    .card-button {
+        display: block;
+        border: 1px solid #cccccc;
+        color: #222;
+        text-align: center;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .card-button:hover {
+        background-color: #1800AD;
+        color: white;
+    }
+
+    .work-with-us {
+        background-color: #1800AD;
+        color: white;
+        padding: 15px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .work-with-us h2 {
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .work-with-us p {
+        color: #dddddd;
+        max-width: 600px;
+        line-height: 1.5;
+    }
+
+    .work-button {
+        background-color: red;
+        color: white;
+        padding: 12px 25px;
+        min-width: 150px;
+        text-align: center;
+    }
+
+    .work-button:hover {
+        background-color: #a80000;
+        color: white;
+    }
+
+    .story-section {
+        display: grid;
+        grid-template-columns: 30% 1fr;
+        gap: 20px;
+        align-items: center;
+        background-color: #eeeeee;
+        padding: 15px;
+        margin-bottom: 25px;
+    }
+
+    .story-image {
+        height: 200px;
+        background-color: white;
+        border: 1px solid #cccccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #777;
+        overflow: hidden;
+    }
+
+    .story-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .story-quote {
+        font-size: 1.4rem;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .story-name {
+        color: #666;
+        font-size: 0.85rem;
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+
+    .story-link {
+        font-size: 0.85rem;
+        font-weight: bold;
+        color: #222;
+    }
+
+    footer {
+        background-color: #eeeeee;
+        padding: 25px;
+        margin-top: 30px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+    }
+
+    .footer-logo img {
+        width: 100px;
+    }
+
+    .footer-column {
+        width: 20%;
+    }
+
+    .footer-column h4 {
+        margin-bottom: 10px;
+    }
+
+    .footer-column a {
+        display: block;
+        color: #555;
+        line-height: 1.8;
+    }
+
+    .rights {
+        border-top: 1px solid #cccccc;
+        margin-top: 30px;
+        padding-top: 15px;
+        color: #777;
+        font-size: 0.8rem;
+    }
+
+    @media screen and (max-width: 900px) {
 
         .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        a {
-            text-decoration: none;
-            color: #1800AD;
-        }
-
-        header {
-            padding: 20px;
-            background-color: white;
+            width: 95%;
         }
 
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
         }
 
-        .logo img {
-            width: 100px;
-            display: block;
+        .logo {
+            margin-bottom: 15px;
+        }
+
+        .involvement-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .story-section {
+            grid-template-columns: 40% 1fr;
+        }
+
+        .footer-content {
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            width: 30%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .involvement-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .card-image {
+            height: 260px;
+        }
+
+        .work-with-us {
+            gap: 15px;
+        }
+
+        .story-section {
+            grid-template-columns: 45% 1fr;
+            gap: 15px;
+        }
+
+        .story-quote {
+            font-size: 1.2rem;
+        }
+
+        .footer-column {
+            width: 45%;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .container {
+            width: 100%;
+        }
+
+        header {
+            padding: 15px;
         }
 
         nav ul {
-            text-align: center;
+            width: 100%;
         }
 
         nav li {
-            display: inline-block;
-            width: auto;
-            margin: 0 18px;
-            line-height: 3em;
+            display: block;
+            width: 100%;
+            margin: 0;
+        }
+
+        nav li a {
+            display: block;
+            padding: 5px;
         }
 
         .student-hub {
-            background-color: #1800AD;
-            color: white;
-            padding: 10px 15px;
-            white-space: nowrap;
+            margin-top: 5px;
         }
 
         .get-involved-hero {
             width: 100%;
             aspect-ratio: 1600 / 600;
-            overflow: hidden;
-            margin-bottom: 25px;
-        }
-
-        .get-involved-hero img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+            margin-bottom: 15px;
         }
 
         .involvement-section {
-            background-color: #eeeeee;
             padding: 15px;
-            margin-bottom: 25px;
-        }
-
-        .involvement-section h2 {
-            font-size: 2rem;
-            margin-bottom: 8px;
-        }
-
-        .involvement-intro {
-            color: #666;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .involvement-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-        }
-
-        .involvement-card {
-            background-color: white;
-            border: 1px solid #cccccc;
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
+            grid-template-columns: 1fr;
         }
 
         .card-image {
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
-            margin-bottom: 10px;
-        }
-
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .involvement-card h3 {
-            font-size: 1rem;
-            margin-bottom: 8px;
-        }
-
-        .involvement-card p {
-            color: #666;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin-bottom: 15px;
-            flex-grow: 1;
-        }
-
-        .card-button {
-            display: block;
-            border: 1px solid #cccccc;
-            color: #222;
-            text-align: center;
-            padding: 10px;
-            font-size: 0.8rem;
-        }
-
-        .card-button:hover {
-            background-color: #1800AD;
-            color: white;
+            height: 400px;
         }
 
         .work-with-us {
-            background-color: #1800AD;
-            color: white;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0 15px 20px;
             padding: 15px;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .work-with-us h2 {
-            color: white;
-            font-size: 2rem;
-            margin-bottom: 8px;
-        }
-
-        .work-with-us p {
-            color: #dddddd;
-            max-width: 600px;
-            line-height: 1.5;
         }
 
         .work-button {
-            background-color: red;
-            color: white;
-            padding: 12px 25px;
-            min-width: 150px;
-            text-align: center;
-        }
-
-        .work-button:hover {
-            background-color: #a80000;
-            color: white;
+            width: 100%;
         }
 
         .story-section {
-            display: grid;
-            grid-template-columns: 30% 1fr;
-            gap: 20px;
-            align-items: center;
-            background-color: #eeeeee;
+            grid-template-columns: 1fr;
+            margin: 0 15px 20px;
             padding: 15px;
-            margin-bottom: 25px;
         }
 
         .story-image {
-            height: 200px;
-            background-color: white;
-            border: 1px solid #cccccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #777;
-            overflow: hidden;
-        }
-
-        .story-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .story-quote {
-            font-size: 1.4rem;
-            line-height: 1.4;
-            margin-bottom: 15px;
-        }
-
-        .story-name {
-            color: #666;
-            font-size: 0.85rem;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
-
-        .story-link {
-            font-size: 0.85rem;
-            font-weight: bold;
-            color: #222;
+            height: 220px;
         }
 
         footer {
-            background-color: #eeeeee;
-            padding: 25px;
-            margin-top: 30px;
+            padding: 20px;
+            margin-top: 20px;
         }
 
         .footer-content {
-            display: flex;
-            justify-content: space-between;
-            gap: 25px;
-        }
-
-        .footer-logo img {
-            width: 100px;
+            flex-direction: column;
         }
 
         .footer-column {
-            width: 20%;
+            width: 100%;
         }
+    }
 
-        .footer-column h4 {
-            margin-bottom: 10px;
-        }
-
-        .footer-column a {
-            display: block;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        .rights {
-            border-top: 1px solid #cccccc;
-            margin-top: 30px;
-            padding-top: 15px;
-            color: #777;
-            font-size: 0.8rem;
-        }
-
-        @media screen and (max-width: 900px) {
-
-            .container {
-                width: 95%;
-            }
-
-            nav {
-                flex-direction: column;
-            }
-
-            .logo {
-                margin-bottom: 15px;
-            }
-
-            .involvement-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .story-section {
-                grid-template-columns: 40% 1fr;
-            }
-
-            .footer-content {
-                flex-wrap: wrap;
-            }
-
-            .footer-column {
-                width: 30%;
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-
-            .container {
-                width: 100%;
-            }
-
-            header {
-                padding: 15px;
-            }
-
-            nav ul {
-                width: 100%;
-            }
-
-            nav li {
-                display: block;
-                width: 100%;
-                margin: 0;
-            }
-
-            nav li a {
-                display: block;
-                padding: 5px;
-            }
-
-            .student-hub {
-                margin-top: 5px;
-            }
-
-            .get-involved-hero {
-                width: 100%;
-                aspect-ratio: 1600 / 600;
-                margin-bottom: 15px;
-            }
-
-            .involvement-section {
-                padding: 15px;
-                margin-bottom: 20px;
-            }
-
-            .involvement-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .card-image {
-                height: 400px;
-            }
-
-            .work-with-us {
-                flex-direction: column;
-                align-items: flex-start;
-                margin: 0 15px 20px;
-                padding: 15px;
-            }
-
-            .work-button {
-                width: 100%;
-            }
-
-            .story-section {
-                grid-template-columns: 1fr;
-                margin: 0 15px 20px;
-                padding: 15px;
-            }
-
-            .story-image {
-                height: 220px;
-            }
-
-            footer {
-                padding: 20px;
-                margin-top: 20px;
-            }
-
-            .footer-content {
-                flex-direction: column;
-            }
-
-            .footer-column {
-                width: 100%;
-            }
-        }
-    </style>
+</style>
 </html>
